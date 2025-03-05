@@ -14,7 +14,7 @@ body{display:flex; align-items: center;
     color:#323232;
 }
 
-body #wrap{width:500px; min-height: 390px;
+body #wrap{width:500px; min-height: 390px; position: relative;
     border:1px solid #dcdcdc; border-radius: 9px;
     box-shadow: inset 0 0 6px #dcdcdc; /*그림자의효과: 수평위치 수직위치 [흐림] [크기] 색상 inset(내부그림자)*/
     background: #f2f2f288;/*background 컬러만 88 반절투명도*/
@@ -34,8 +34,8 @@ body #wrap h2{border-bottom: 1px solid #ddd; font-weight: 400px;
 }
 
 #wrap p{margin-bottom:10px;}
-#wrap label{display: none;}
-#wrap input{width: 15em; padding: 1em 0.5em 1em 2.5em;
+#wrap label:not([for="accept"]){display: none;}
+#wrap input:not(#accept){width: 15em; padding: 1em 0.5em 1em 2.5em;
     border:1px solid #cdcdcd; border-radius: 5px;
     box-shadow:inset 0 0 4px #dcdcdc; outline: none;
     transition: all .4s;
@@ -46,27 +46,59 @@ body #wrap h2{border-bottom: 1px solid #ddd; font-weight: 400px;
     background:#f8f8f8 url("./images/u_icons_splite.png") no-repeat 5px 10px;
  } /*em은 글자크기 기준 1em 글자와 같은 사이즈 20px 300px*/
 
-#wrap input:focus{width:17em; background-color: #fff; border-color: #7ccbe8;
+#wrap input:not(#accept):focus{width:17em; background-color: #fff; border-color: #7ccbe8;
 
-}/*input가 선택되었을 때*/
+}/*input가 선택되었을 때, input:not(#accept) input id가 accept는 제외*/
 
 
-#wrap #name{background-position: 5px 10px;}
-#wrap #name:focus{background-position: 5px -20px;}
-#wrap #phone{background-position: 5px -49px;}
-#wrap #phone:focus{background-position: 5px -77px;}
-#wrap #email{background-position: 5px -107px;}
-#wrap #email:focus{background-position: 5px -133px;}
-#wrap #website{background-position: 5px -160px;}
-#wrap #website:focus{background-position: 5px -188px;}
-#wrap #pass{background-position: 5px -217px;}
-#wrap #pass:focus{background-position: 5px -247px;}
+#wrap p #name{background-position: 5px 10px;}
+#wrap p #name:focus{background-position: 5px -20px;}
+#wrap p #phone{background-position: 5px -49px;}
+#wrap p #phone:focus{background-position: 5px -77px;}
+#wrap p #email{background-position: 5px -107px;}
+#wrap p #email:focus{background-position: 5px -133px;}
+#wrap p #website{background-position: 5px -160px;}
+#wrap p #website:focus{background-position: 5px -188px;}
+#wrap p #pass{background-position: 5px -217px;}
+#wrap p #pass:focus{background-position: 5px -247px;}
 
 #wrap input + span{color:red; font-weight: bold; 
 display:none}
 #wrap input[required="required"] + span{display:inline}
 
+/*
+    input태그 - inline-block
+    inline-block요소는 글자와 수평하게 나열된다.
+    수평하게 나열되는 기준은 baseline을 기본값으로 한다.
+    vertical-align: 수직위치를 변경한다.(inline-block만 가능)
+*/
+#wrap #accept{vertical-align: -2px;}
 
+#wrap #accept + label a{color:#31a8a7;
+    text-decoration: none;
+}
+
+#wrap #add{
+    position:absolute; top:140px; right:40px;
+    width:140px; height:140px; border-radius: 50%;
+    background:linear-gradient(-35deg, #fff 10%,#e0e0e0 51%);
+    border:1px solid #cfcfcf;
+    outline:2px solid #c3d4db;
+}
+
+#wrap #btn{
+    margin:15px; width:110px; height:110px;
+    border-radius: 50%;
+    border:3px solid #fff;
+    background:linear-gradient(-35deg,#7c7c7c 5%, 
+    #454545 30%, #1f1f1f 50%,  #000 51%);
+    transition: all .3s; text-indent: -100px; overflow:hidden;
+}
+
+#wrap #btn:hover{
+    box-shadow: 0 0 20px #ff08;/*수평위치 수직위치 변지는 정도*/
+    transform:scale(1.1); cursor: pointer;
+}
  
 
 
