@@ -99,6 +99,17 @@ display:none}
     box-shadow: 0 0 20px #ff08;/*수평위치 수직위치 변지는 정도*/
     transform:scale(1.1); cursor: pointer;
 }
+/*
+    가상요소(영역을 만듬) - ::bofore, ::after 
+     ::bofore {대상의 첫번째 자식보다 앞에 영역생성} #wrap #btn::before-가입글자 앞
+     ::after  {대상의 마지막 자식보다 뒤에 영역생성} #wrap #btn::after-가입글자 뒤
+ */
+#wrap #btn::before,
+#wrap #btn::after{content:""; position:absolute;
+    top:calc(50% - 3px); left:calc(50% - 12px); width:24px; height:6px;
+    background: #fff; 
+}
+#wrap #btn::after{transform: rotate(90deg);}
  
 
 
