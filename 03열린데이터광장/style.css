@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/* 리셋코드: 태그가 가지는 기본값을 0 또는 none으로 설정 */
+* {margin:0; padding:0;}
+li{list-style:none;}
+img{vertical-align:top;} /*이미지사이 0 여백없게함*/
+
+#seoul{border:5px solid #f00;}
+#seoul div{outline: 2px solid #00f;}
+#seoul .s_logo{float:left;}
+#seoul .s_notice{float:left;}
+#seoul .s_menu{float:right;}
+
+
+
