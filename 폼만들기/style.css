@@ -1,17 +1,17 @@
-@charset "utf-8"
+@charset "utf-8";
 
 /* 리셋코드: 태그가 가지는 기본값을 0 또는 none으로 설정 */
 
-*{margin:0; padding:0;}
+* {margin:0; padding:0;}
 li{list-style:none;}
 
 html, body{height: 100%;}
 body{display:flex; align-items: center; 
     justify-content: center;
     background: url("./images/bg.png") no-repeat center,
-    url("./images/bg-pattern.png") center;
-    font-family: "나눔 고딕"; font-size:13px;
-    line-height:1.5; color:#323232;
+    url("./images/bg-pattern.png") center;    
+    font:13px/1.5 "Nanum Gothic", "돋움";  /* font-family: "Nanum Gothic", "돋움"; font-size:13px; line-height:1.5; */
+    color:#323232;
 }
 
 body #wrap{width:500px; min-height: 390px;
@@ -30,11 +30,43 @@ body #wrap > *{margin:15px 20px;}
 body #wrap h2{border-bottom: 1px solid #ddd; font-weight: 400px;
     font-family: "Glass Antiqua", cursive; line-height: 1.8; /*글자크기 1.8배*/
     text-shadow: 1px 1px #ddd;
+    font-size: 24px;
 }
 
 #wrap p{margin-bottom:10px;}
 #wrap label{display: none;}
-#wrap input{font-size: 20px; width: 15em;
-    padding: 0.1em 0.5em 0.1em 2.5em;
-    line-height: 1.8;
+#wrap input{width: 15em; padding: 1em 0.5em 1em 2.5em;
+    border:1px solid #cdcdcd; border-radius: 5px;
+    box-shadow:inset 0 0 4px #dcdcdc; outline: none;
+    transition: all .4s;
+    /* 
+        transition: [대상] [전환시간] [속성] [대기시간];
+    */
+
+    background:#f8f8f8 url("./images/u_icons_splite.png") no-repeat 5px 10px;
  } /*em은 글자크기 기준 1em 글자와 같은 사이즈 20px 300px*/
+
+#wrap input:focus{width:17em; background-color: #fff; border-color: #7ccbe8;
+
+}/*input가 선택되었을 때*/
+
+
+#wrap #name{background-position: 5px 10px;}
+#wrap #name:focus{background-position: 5px -20px;}
+#wrap #phone{background-position: 5px -49px;}
+#wrap #phone:focus{background-position: 5px -77px;}
+#wrap #email{background-position: 5px -107px;}
+#wrap #email:focus{background-position: 5px -133px;}
+#wrap #website{background-position: 5px -160px;}
+#wrap #website:focus{background-position: 5px -188px;}
+#wrap #pass{background-position: 5px -217px;}
+#wrap #pass:focus{background-position: 5px -247px;}
+
+#wrap input + span{color:red; font-weight: bold; 
+display:none}
+#wrap input[required="required"] + span{display:inline}
+
+
+ 
+
+
