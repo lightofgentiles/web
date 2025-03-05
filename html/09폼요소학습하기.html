@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>09폼요소학습하기</title>
+	</head>
+	<body>
+		<form action="작성된 데이타를 입력받을 시스템의 주소">
+			<p>
+				<label for="text">텍스트 입력폼 : </label><!--폼요소의 이름표-->
+				<input id="text" type="text" placeholder="입력힌트" list="data">
+				<datalist id="data">
+					<option>선택항목1</option>
+					<option>선택항목2</option>
+					<option>선택항목3</option>
+				</datalist>
+			</p>
+			<p>
+				<label for="pw">비밀번호 입력폼 : </label><!--폼요소의 이름표-->
+				<input id="pw" type="password">
+			</p>
+			<p>
+				<input type="button" value="버튼">
+				<input type="submit" value="전송">
+				<input type="reset" value="초기화"><!--입력되 데이타 초기화-->
+				<input type="image" src="starbucks.png"><!--이미지 버튼-->
+			</p>
+			<p>
+				<label><input type="checkbox" value="값">월</label>
+				<label><input type="checkbox" value="값">화</label>
+				<label><input type="checkbox" value="값">수</label>
+				<!--다수를 선택가능-->
+			</p>
+			<p>
+				<label><input type="radio" name="gender" checked >남</label>
+				<label><input type="radio" name="gender">여</label>
+				<!--다수중 하나만 선택가능-->
+			</p>
+			</p>
+		</form>
+	</body>
+</html>

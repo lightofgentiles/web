@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 블록요소의 수평정렬</title>
+    <style>
+        div{border:5px solid #f00}
+
+        p{width:100px; height:100px; border:5px solid #000;
+          background:#ccc; font-size:30px;
+          font-weight:bold; text-transform:uppercase;
+          margin:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <h3>display:inline;</h3>
+        <p>a</p><p>b</p><br><p>c</p><p>d</p>
+    </div>
+    <div id="box2">
+        <h3>display:inline-block;</h3>
+        <p>a</p><p>b</p><br><p>c</p><p>d</p>
+    </div>
+    <div id="box3">
+        <h3>float:left; (right);</h3>
+        <p>a</p>
+        <p>b</p>
+        <p>c</p>
+        <p>d</p>
+        <div class="item">영역</div>
+    </div>
+    <style>
+        #box1{text-align:center;}
+        #box1 p{display:inline;}
+        #box2{text-align:right;}
+        #box2 p{display:inline-block;}
+        #box3 p{float:left;}
+        /* #box3 p:nth-child(4){clear:both;} */
+        #box3 p:nth-child(odd){float:rightleft;}
+        #box3 p:nth-child(2){margin-left:20px;}
+        .item{width:150px; height:150; background: pink;
+            border-color: blue;    
+        }
+        
+    </style>
+</body>
+</html>

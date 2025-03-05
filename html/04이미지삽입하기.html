@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--메타데이터 : 문서를 설명하는 데이터-->
+		<meta charset="utf-8"><!--문자 인코딩 방식(한글이깨지는 현상방지)-->
+		<meta name="author" content="소유자명">
+		<meta name="description" content="문서의 간략설명">
+		<meta name="keywords" content="키워드, 검색어">
+		
+		<title>04이미지삽입하기</title>
+	</head>	
+	<body>
+		<p><iframe src="메뉴.html" width="600" height="40"frameborder="0"></iframe></p>
+		<h1>이미지태그</h1>
+		<hr>
+		<div>
+			<h2>절대경로로 주소지정하기</h2>
+			<P>최사위폴더(루트)에서부터 위치를 지정해 나아가는 방식</p>
+			<p>
+				<img src="D:\안국재\html\hope.jpg" width="250px">
+			</p>
+		</div>
+		<hr>
+		<div>
+			<h2>상대경로 주소지정하기</h2>
+			<P>현대 작성문서를 기준으로 위치를 지정해 나아가는 방식</p>
+			<p>
+				<img src="../flower.jpg">
+				<br>
+				<img src="사진/tree.jpg">
+			</p>
+			<!--
+				./현재폴더
+				../ 한 수준 위 폴더로 이동하여 검색
+				../../ 두 수준 위 폴더로 이동하여 검
+			-->
+		</div>
+		</body>
+</html>

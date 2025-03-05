@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/*외부 CSS문서 연결하기(p165)*/
+@import url("선택자.css");
+
+img{
+	width:298px;
+	height:98px;
+	border:1px solid yellow;
+}
+#image{
+	border:10px solid #F00; /*content 영역 */
+	padding:20px 40px 60px 80px;
+	margin-left:50px;
+	margin-bottom:80px;
+	/* padding : 20px; 4방향 20px:
+		padding : 20px 40px; 20px;은 위아래 40px 왼쪽 오른쪽:
+		pddding : 20px 40px 60px; 위20px 왼쪽오른쪽 40px 아래 20px
+		pddding : 20px 40px 60px 80px; 위부터 시계방향
+	    margin:50px;
+	}
+
+/*
+	박스모델(p184)
+	(1) content영역 : 태그안 - 시작태그와 끝태그 사이, 내용을 작성하는 곳(텍스트 or 또란드 테그)
+		-width속성과 height 속성에 의해 크기조절됨.
+	(2) padding 영역 : 내부여백(or 영역의 확장)
+		-background만 표현됨.
+	(3) border 영역 : 태두리
+	(4) margin영역 : 외부여백
+*/

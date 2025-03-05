@@ -1,0 +1,34 @@
+@charset "utf-8"; /*문자 인코딩 정보표기*/
+
+대상{속성:속성값;속성:속성값; 속성:속성값 속성값 속성값;}
+
+body{background:#ffffcc;}
+
+h1{font-family:"궁서"; color:green; border:10px solid blue;}
+
+p{
+	width:400px;
+	height:300px;
+	border:3px dashed #000; /*dashed 점선*/
+	font-family:"Arial", "돋움"; /*글자체(폰트) 여러개의 폰트를 설정하면, 맨 처음 설정한 폰트가 없거나 지원않으면 차순위로 적용*/
+	font-size:24px;
+	color:#00F;
+	line-height: 50px; /*행높이(줄간격)*/
+	text-align:center; /*글자의 수평정렬*/
+	letter-spacing: 3px; /*자간*/
+	text-indent:50px; /*들여쓰기와 (마이너스표시)내어쓰기*/
+}
+
+
+strong{
+	color:red;
+	font-style:italic;
+	text-decoration:underline; /*밀줄*/
+}
+
+em{
+	font-weight:bold; /*굵기조절*/
+}
+
+b{font-weight:normal;}
+i{font-style:normal;}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대상의 구성</title>
+    <style>
+        /* 모든요소(*) */
+        *{margin:0;}
+
+        /* 복수대상(여러요소 지점) */
+        h3, h1, p{border:1px solid #000;}
+        
+        /* 위치적인 조건부여(조상-자손) */
+        #wrap div{border:10px solid #f00; margin:10px;}
+        #wrap div p{font-family:"궁서";}
+
+        /* 위치적인 조건부여(부모-자식) */
+        #wrap > p{font-size:20px; color:#0f0;}
+
+        /* 바로 다음에 오는 요소(형제요소) */
+        h3 + p{color:#00f; font-weight:bold;}
+
+        /* 뒤에 오는(밑에 있는) 모든 형제요소 */
+        h3 ~ p{font-style:italic; text-align: center;}
+
+        /* 하나의 대상을 정밀하게 선택(순서->id) */
+        h1#this.abc.def{font-size:50px; background: #ffc;}
+
+    </style>
+</head>
+<body>
+    <h1 id="this" class="abc def">대상의 구성(p172)</h1>
+    <div id="wrap">
+        <p>CSS에서 스타일의 대상을 구성하는 다양한 방식</p>
+        <div id="box1">
+            <h3>제목태그</h3>
+            <p>단락태그</p>
+            <p>단락태그</p>
+            <p>단락태그</p>
+        </div>
+        <div id="box2">
+            <p>단락태그</p>
+            <h3>제목태그</h3>
+            <p>단락태그</p>
+            <p>단락태그</p>
+        </div>
+    </div>
+
+</body>
+</html>

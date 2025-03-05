@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*태그셀렉터*/
+h1{color:blue; font-family:"궁서"; 	bolder:5px;	text-align:center;}
+
+hr{height:10px; background:#FFFF99;}
+
+div {	width:300px;height:100px;background:gray;color:#fff;border:5px solid #000;}
+
+/*아이디셀렉터 중복불가*/
+#a{background:#ff0;} /*id가 a에게 색깔 변환*/
+#b{background:#f0f;}
+#c{background:#0ff;}
+
+/*클래스셀렉터 중복가능*/
+.abc{font-family:"궁서"; font-weight:bold; color:blue;}
+.def{font-size:30px; text-align:right;}

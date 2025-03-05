@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 flex로 정렬하기</title>
+    <style>
+        *{margin:0px;}
+        .wrap{border: 5px solid #f00; margin:50px;
+            outline:10px solid #0f0;
+            display:flex;
+            flex-direction: row;
+            height:200px; /*flex 부모에 따라 늘어남*/
+            justify-content:space-evenly; /*테스트를 왼쪽으로 정렬*/
+            align-items:center; 
+        }
+
+        .wrap .item{width:10%; font-size:30px;
+            text-transform:uppercase; font-weight:bold;}
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <p class="item" id="a" style="background:blue;">a</p>
+        <p class="item" id="b" style="background:rgb(238, 255, 0);">b</p>
+        <p class="item" id="c" style="background:rgb(0, 225, 255);">c</p>
+        <p class="item" id="d" style="background:rgb(187, 255, 0);">d</p>
+        <p class="item" id="e" style="background:rgb(0, 255, 213);">e</p>
+    </div>
+    <style>
+        .wrap2{border:10px solid #000; margin:100px; /*블럭인 경우 마진이 겹친다. 인라인경우 마진이 겹치지 않는다*/
+            height:200px; display:flex;
+            flex-flow:row wrap;/* flex-direction:row; flex-wrap:wrap; 같이 사용함. 거의 안씀*/
+            justify-content: center;
+            gap: 40px;
+        }
+        .wrap2 .item{font-size:40px; text-transform:uppercase;
+            text-align:center; font-weight:bold; width:200px;
+        }
+
+        
+    </style>
+    <div class="wrap2">
+        <p class="item" id="a" style="background:blue;">a</p>
+        <p class="item" id="b" style="background:rgb(238, 255, 0);">b</p>
+        <p class="item" id="c" style="background:rgb(0, 225, 255);">c</p>
+        <p class="item" id="d" style="background:rgb(187, 255, 0);">d</p>
+        <p class="item" id="e" style="background:rgb(0, 255, 213);">e</p>
+    </div>
+</body>
+</html>

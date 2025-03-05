@@ -1,0 +1,47 @@
+CSS 사용하는 이유
+(1) 스타일이 다양하고, 세분화 되어 있다
+      - 동적인 표현까지 가능함.
+(2) 구조와 스타일 분리하여, 작성할 수 있다.
+
+1. block태그 : 구조를 만들때 사용됨, 영역/컨텐츠 영역(p214)
+-div, h1~h6, p, ul, li, dt, dd, hr, form, pre, fieldset, legend
+div: 영역을 나누는 것->header, main, footer, aside.nav, section, article, address, figure, figcaption
+details, summary
+* - 수직정렬, 크기조절이 가능함(기본크기:너비는 부모와 같고, 높이는 내용만큼 설정)
+* 블록태그의 수평정렬
+1. display:inline-block(or inline-사용안하는 좋음)
+   [유의점]
+   (1) 크기조절이 안됨(inline만)
+   (2) 공백문자(띄어쓰기)를 인식함,**->font-size:0; 처리할 수 있음
+   (3) 텍스트처럼 취급해야함
+
+2. float: left 또는 right;
+   [유의점]
+   (1) 가운데 정렬이 안됨. 글자도 왼쪽부터 시작, 오른쪽부터 시작
+   (2) right 설정시, 오른 쪽에서부터 순차적으로 나열됨.
+   (3) 줄바꿈 : clear속성을 사용함.
+   (4) block요소가 float 적용된 요소를 인식하지 못함.
+       - 다음에 오는 형제요소(block) : clear:both 사용함
+       - 감싸고 있는 부모요소(block)
+         (1) 강제적으로 높이값을 준다.
+         (2) overflow:hidden;을 사용한다.
+
+   **clear:both;(left;right;)-선행되는 float 효과를 지움.
+
+
+2. inline 태그 : 테스트 내용을 감싸는 태그
+- a, span, strong, em, b, i, label(samll,del ins, sup, sub, mark-> 잘안씀)
+*특징
+-수평정렬, 크기조절이 안됨.(기본크기:너비는 내용만큼, 높이는 글자크기(font-size)만큼)
+공백문자(띄어쓰기로 인식), 블록요소를 감쌀 수 없다.
+
+
+3. inline-block 태그 : 컨텐츠(텍스트와 같다)->
+- img, iframe, video, audio, input, select, textarea, button
+*특징 - 수평정렬, 크기조절이 가능, 기본크기는 너비와 높이는 둘다 내용만큼, 텍스트를 감싸는 경우는 행높이(line-height)만큼 설정됨.
+블록요소를 감쌀 수 있다.
+
+
+**레이아웃 구성방법
+1. flex - 보더보다는 outline선호 
+2. grid
