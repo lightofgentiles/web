@@ -5,11 +5,30 @@
 li{list-style:none;}
 img{vertical-align:top;} /*이미지사이 0 여백없게함*/
 
-#seoul{border:5px solid #f00;}
-#seoul div{outline: 2px solid #00f;}
+#seoul{width:1200px; margin: 0 auto; overflow:hidden;}
+/* #seoul div{outline: 2px solid #00f;} */
 #seoul .s_logo{float:left;}
-#seoul .s_notice{float:left;}
-#seoul .s_menu{float:right;}
+#seoul .s_notice{float:left; margin-left:75px;}
+/* #seoul .s_menu{float:right; font-size:0;} font-size:0; inline-block 공백이 생겨서 넣음 */
+#seoul .s_menu{float:right;} 
+#seoul .s_menu ul{display:flex;}
 
+header{border-top:1px solid #e4e9f0; border-bottom:1px solid #e4e9f0;
+    padding: 30px 0;}
+header .inner{width:1200px; margin: 0 auto; 
+    display:flex; justify-content: space-between;
+    }
+/* header > *{outline: 2px solid #0f0;} */
+header #gnb ul{display:flex;}
+header #lnb ul{display:flex;}
 
+main{width:1200px; height: 3000px; margin:0 auto; 
+    border:5px solid #000}
+main .container{height:605px; background: url("./images/bg.png") no-repeat center 0;
+    display:flex; justify-content: space-between;
+    flex-wrap: wrap; align-content: space-around;
+}
+main section{outline: 1px solid #0f0;}
 
+#title h2{font-size: 33px; color:#fff; margin-bottom:30px;}
+#title p{font-size: 16px; color:#c5dbff;}
