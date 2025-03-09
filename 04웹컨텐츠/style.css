@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+*{margin:0; padding:0;}
+li{list-style:none;}
+
+html{height:100%;}
+body{height:100%; background:#0b0810; position:relative;
+    font-family: "Pretendard"; color:white; overflow: hidden;}
+
+#title{filter:contrast(0) brightness(2);
+    position: absolute; top:20px; left: 20px; width:20%;}
+
+#link{position:absolute; bottom: 20px; right:20px;}
+#link a{color:white; text-decoration: none;}
+#link a:hover{text-decoration: underline;}
+
+
+
+@keyframes movie{
+    0%{transform:rotateY(0deg);}
+    100%{transform: rotateY(360deg);}
+}
+
+#logo_bg{position:absolute; top:20px; right:20px; 
+    width:30%; animation: movie 10s infinite linear;}
+
+/* animation: 이름 재생시간 재생횟수 속도 방향 대기시간 대기모드; */
+
+
+
+main{width:100%; height: 100%; display: flex;
+    justify-content: center; align-items: center;}
+
+#view label{border:0px solid red; 
+    display:block; width:11%; position: relative;
+    background:white; color:black;
+    transition: all 0.3s; box-sizing:border-box; /*보더 영역까지 크기적용됨*/
+    border-radius: 12px;
+}
+
+#view{width:90%; height:50%; display:flex; gap:0.6%;
+    }
+
+#view input{display:none;}
+
+#view input:checked + label{flex-grow:1;} 
+#view input:checked + label .box{opacity:0;}
+    /* flex에 의해 커지는 비율 */
+
+#view label .tab_image{
+    position:absolute; top:0; left:-50%; width:200%; height:100%;
+    background:black; transition:all .3s; 
+}
+
+#view label:hover .tab_image{
+    transform:scale(1.4) rotate(-15deg);
+}
+
+#view label .box{position:relative; overflow:hidden;
+    width:100%; height:100%; border-radius:12px;
+    box-sizing:border-box;}
+
+
+#view label .tab_image img{
+        width:100%; height:100%; object-fit:cover; /* 이미지 원래비율 유지 */
+        transition:all 0.3s;
+}
+
+#view label:hover .tab_image img{opacity:0.5;}
+
+#view label .tab_title{
+    position:absolute; left:0; top:100%; padding-top: 0px;
+    width:100%; text-align:center; color:white;
+    font-weight:500px; font-size:1vw; opacity:0;
+    transition : 0.3s;
+}
+
+#view label:hover .tab_title{padding-top: 10px; opacity: 1;}
+
+#view .contents{
+    opacity:0; transition:all .2s;
+    width:100%; height:100%; position:absolute; top:0; left:0;
+    border-radius:12px; overflow:hidden;
+    background:linear-gradient(0deg, #fff 22%, #d8d8db 22%, #fff)
+}
+
+#view input:checked + label .contents{opacity:1;}
+
+#view .contents .tit{
+    position:absolute; top:30px; left:30px;
+    font-size: 2vw; font-family: "Cinzel", serif;
+    font-weight: 500px;
+}
+
+#view .contents .bg{
+    position:absolute; width: 45%; bottom:45%; right:3%;
+    opacity:0.2;
+}
+
+#view .contents .item{
+    position:absolute; width:100%; bottom:3%; left:-5%;
+    text-align:center; transition:all .4s;
+    opacity:0;
+}
+
+#view input:checked + label .contents .item{
+    left:0; opacity:1; transition-delay: .3s;
+}
+
+#view .contents .item img{width:92%;}
+
+#view .contents .tip{
+    position:absolute; bottom:0; right:2%;
+    display:flex; gap:10px;
+}
+
+#view .contents .tip dl{
+    background:#fff6; font-size:1vw; padding:1em;
+    border-left:1px solid #fff;
+    border-right:1px solid #fff;
+    transition:all .3s; opacity:0; transform:translateY(50%);
+
+}
+
+#view input:checked + label .contents .tip dl{
+    opacity:1; transform: translateY(0);
+}
+
+#view input:checked + label .contents .tip dl:nth-child(1){
+    transition-delay:.6s;}
+#view input:checked + label .contents .tip dl:nth-child(2){
+    transition-delay:.7s;}
+#view input:checked + label .contents .tip dl:nth-child(3){
+    transition-delay:.8s;}
+
+#view .contents .tip dt{font-size:1.5vw; margin-bottom:10px;}
