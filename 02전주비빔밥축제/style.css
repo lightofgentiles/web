@@ -24,10 +24,14 @@ main #title img{
     width: 100%;
 }
 main #notice {display: grid;
-    grid-template-columns: 300px 390px 255px 255px;
+    grid-template-columns: 345px 345px 255px 255px;
     justify-content: space-between;
 }
-main #notice:nth-child(5){object-fit: cover;
-    background-color: #f0f;
+
+main #notice iframe{width: 100%; height: 100%;}
+main #notice img{width: 100%; height: 100%;
 }
 
+main #host1 {display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+/* 리셋코드: 태그가 가지는 기본값을 0 또는 none으로 설정 */
+* {margin:0; padding:0;}
+li{list-style:none;}
+img{vertical-align:top;} /*이미지사이 0 여백없게함*/
+
+body{min-width:1200px;} /*header와 footer 길이 밖으로 나가는 현상*/
