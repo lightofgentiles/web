@@ -1,8 +1,83 @@
 @charset "utf-8";
+/*웹폰트연결*/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-/* 리셋코드: 태그가 가지는 기본값을 0 또는 none으로 설정 */
-* {margin:0; padding:0;}
-li{list-style:none;}
-img{vertical-align:top;} /*이미지사이 0 여백없게함*/
+/* 리셋코드: 태그가 가지는 기본값을 0 또는 none으로 설정 
+   - https://meyerweb.com/ toolbox의 css tools a copy of the file
+*/
+@import url("reset.css");
+body{font-family: "Pretendard";}
+a{color:inherit; text-decoration: none;} /*inherit 부모값과 같은 값*/
 
-body{min-width:1200px;} /*header와 footer 길이 밖으로 나가는 현상*/
+
+.inner {width: 1400px; margin: 0 auto; box-sizing: border-box;}
+
+#top ul{display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #efedef;
+}
+#top li{font-size: 14px; height: 30px; line-height: 30px;
+    padding: 10px 10px;
+}
+#top li a:hover{text-decoration: underline;}
+/* header .top{font-size: 0;} */
+header {width: 1400px; margin: 0 auto;}
+/* header > *{outline:1px solid #f00;} */
+
+
+header .main1{display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+}
+header #login ul{display:flex; gap:10px;
+}
+header #gnb ul{display:flex; gap:16px}
+
+header #gnb .dep1{font-size: 22px; color: #333;
+    font-weight: bold; letter-spacing: -1px; position: relative;}
+header #gnb a{padding:20px; position: relative;}
+header #gnb .dep1 li:hover > a{color: #0e7876;}
+header #gnb a:before{content: ""; position:absolute;
+    width: 6px; height: 6px; top:10px; left:50%; margin-left: -3px;
+    background: #0e7876; border-radius: 50%;
+    opacity:0; transition: all .2s;
+}
+header #gnb a:hover::before{opacity: 1; top:0;}
+header #gnb li .sub{position: absolute; background: #fff;
+    top:65px; width:250px; left:50%; margin-left:-125px;
+    border-radius: 16px; border:1px solid #0e7876;
+    padding: 30px 20px; box-sizing: border-box;
+    box-shadow: 0 0 24px #0002; opacity: 0;
+    transition: all .3s; visibility: hidden;
+}
+header #gnb li:hover .sub{opacity: 1; top:50px;
+    visibility: visible;
+}
+header #gnb li .sub ul{display: block;}
+header #gnb li .sub li{line-height: 30px; font-size: 18px;}
+header #gnb li .sub a::before{top:50%; left:6px; margin-top: -3px;
+}
+header #gnb li .sub a:hover{color:#0e7876}
+header #gnb li .sub a:hover::before{opacity: 1;}
+
+main #main_visual img{border-radius:24px;}
+#search{margin: 60px auto; border: 1px solid #0e7876;
+    border-radius: 16px; box-shadow: 0 0 16px #0001;
+    padding:5px 20px 5px 30px; font-size: 0;
+}
+#search input{height: 60px; width: calc(100% - 50px);
+    box-sizing: border-box; border: 0; font-size: 18px;
+    color: #333; padding:0;
+}
+#search button{width:50px; height: 50px;
+background: url("./images/ico-archive-search.png") no-repeat center;
+    text-indent: -100px; overflow: hidden; border:0;
+}
+#statics {padding:20px; background: #ebf4f1;
+    border-radius: 20px;
+}
+#statics dl{display: flex; justify-content: space-between;}
+#statics img{border-radius: 50%;}
+#statics dd:hover img{box-shadow: 0 13px 17.8px 2.2.px;}
+#online ul{display: flex;}
