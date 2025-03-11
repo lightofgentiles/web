@@ -80,4 +80,117 @@ background: url("./images/ico-archive-search.png") no-repeat center;
 #statics dl{display: flex; justify-content: space-between;}
 #statics img{border-radius: 50%;}
 #statics dd:hover img{box-shadow: 0 13px 17.8px 2.2.px;}
-#online ul{display: flex;}
+#online{position: relative; margin-bottom: 80px;}
+#online h2{font-size:35px; font-weight:bold; margin-bottom: 50px; 
+}
+#online .more{position: absolute; top:0; right:0;}
+#online ul{display: flex; gap:40px;}
+#online li{width:calc((100% - 120px) / 4);}
+#online li p{border-radius: 20px; overflow: hidden;
+    border: 1px solid #ddd; margin-bottom: 40px;
+    font-size: 0; transition:all .3s;}
+#online li img{width: 100%; transition: all 0.3s;}
+/* #online ul a img{width: 300px; border-radius: 20px;} */
+#online li:hover p{box-shadow: 0 8px 21px #0002;} /*그림자의 위치*/
+#online li:hover img{transform: scale(1.1);}
+#online li h3{font-size: 22px; color:#333; font-weight: bold;
+    white-space: nowrap;/*보이지 않는 공백문자*/
+    overflow: hidden;
+    text-overflow: ellipsis; /*잘린부분 글자 ...으로 푠현*/
+}
+@keyframes text_ani{
+    0%{transform:translateX(0%);} /*시간을 90% 나누어주는 주어 그 시간에 일어나는 현상*/
+    90%{transform:translateX(-150%);}
+    95%{transform:translateX(0%);}
+    100%{transform:translateX(0%);}
+}
+#online li .overflow{overflow:hidden;}
+#online li:hover .overflow h3{
+    overflow: visible;
+    text-overflow:initial;
+    animation:text_ani 7s infinite linear; /*linear 같은 속도*/
+}
+#collection{position: relative; margin-bottom: 80px;}
+#collection h2{font-size:35px; font-weight:bold; margin-bottom: 50px; 
+}
+#collection .more{position: absolute; top:0; right:0;}
+#collection ul{display: flex; gap:40px;}
+#collection li{width:calc((100% - 80px) / 3);}
+#collection li p{border-radius: 20px; overflow: hidden;
+    border: 1px solid #ddd; 
+    font-size: 0; transition:all .3s;}
+#collection li img{width: 100%; transition: all 0.3s;}
+#collection li:hover p{box-shadow: 0 8px 21px #0002;} /*그림자의 위치*/
+#collection li:hover img{transform: scale(1.1);}
+#collection li h3{font-size: 22px; color:#333; font-weight: bold;
+    white-space: nowrap;/*보이지 않는 공백문자*/
+    overflow: hidden;
+    text-overflow: ellipsis; /*잘린부분 글자 ...으로 푠현*/
+    margin-top: 20px;
+}
+.community_wrap{position:relative; margin: 0 auto;  padding-top:60px;}
+.community_wrap::before{content:""; position: absolute;
+    top:0; left:0; width: 100%; height: 380px;
+    background: #14a677;
+}
+.community_wrap::after{content:url("./images/bg-community.png");
+    position: absolute; right:0; top:-77px;
+}
+#community {position: relative; margin-bottom: 80px;}
+#community h2{font-size:35px; font-weight:bold; color:#fff;
+    margin-bottom: 15px; 
+}
+#community .sub_title{font-size: 20px; margin-bottom: 50px;color:#fff;}
+#community .more{position: absolute; top:10px; right:0;
+    font-size:18px; font-weight: bold; background: #ffd044;
+    height: 60px; line-height: 60px; padding:0 20px;
+    border-radius: 32px 0;
+    z-index: 2; /*1이상의 값을 추가하면 겹쳐질때 앞으로 나타남*/
+}
+#community ul{display: flex; gap:40px;}
+#community li{width:calc((100% - 120px) / 4);}
+#community li p{border-radius: 20px; overflow: hidden;
+    font-size: 0; transition:all .3s;}
+#community li img{width: 100%; transition: all 0.3s;}
+
+#community li:hover p{box-shadow: 0 8px 21px #0002;} /*그림자의 위치*/
+#community li:hover img{transform: scale(1.1);}
+#community li h3{font-size: 22px; color:#333; font-weight: bold;
+    white-space: nowrap;/*보이지 않는 공백문자*/
+    overflow: hidden;
+    text-overflow: ellipsis; /*잘린부분 글자 ...으로 푠현*/
+}
+@keyframes text_ani{
+    0%{transform:translateX(0%);} /*시간을 90% 나누어주는 주어 그 시간에 일어나는 현상*/
+    90%{transform:translateX(-150%);}
+    95%{transform:translateX(0%);}
+    100%{transform:translateX(0%);}
+}
+#community li .overflow{overflow:hidden;}
+#community li:hover .overflow h3{
+    overflow: visible;
+    text-overflow:initial;
+    animation:text_ani 7s infinite linear; /*linear 같은 속도*/
+}
+#community li .info{font-size:14px; color:#666;}
+#community li .info em{color:#0e7876; font-weight: bold;
+    font-size:16px; margin-left: 10px;}
+
+#contribute{position: relative; margin-bottom: 80px;}
+#contribute h2{font-size:35px; font-weight:bold; margin-bottom: 50px; 
+}
+#contribute .more{position: absolute; top:0; right:0;}
+#contribute ul{display: flex; gap:40px;}
+#contribute li{width:calc((100% - 120px) / 4);}
+#contribute li p{border-radius: 20px; overflow: hidden;
+    border: 1px solid #ddd; margin-bottom: 40px;
+    font-size: 0; transition:all .3s;}
+#contribute li img{width: 100%; transition: all 0.3s;}
+#contribute li:hover p{box-shadow: 0 8px 21px #0002;} /*그림자의 위치*/
+#contribute li:hover img{transform: scale(1.1);}
+#contribute li h3{font-size: 22px; color:#333; font-weight: bold;
+    white-space: nowrap;/*보이지 않는 공백문자*/
+    overflow: hidden;
+    text-overflow: ellipsis; /*잘린부분 글자 ...으로 푠현*/
+    text-align: center;
+}
